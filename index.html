@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width: 800px)"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Inter:wght@300;500&amp;display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -13,24 +14,26 @@
             <h2>25:00</h2>
             <div class="input-container">
                 <label for="">Pomodoro cycles</label>
-                <input type="number" value="1">
+                <input type="number" value="1" disabled>
             </div>
         </div>
-        <div class="control-container">
-            <button type="button">START</button>
+        <div>
+            <button class="button-container">
+                <span type="button" class="button-start">START</span>
+            </button>
         </div>
         <div class="settings-container">
             <label for="work-time">
                 <span>WORK TIME</span>
-                <input type="text" id="work-time" value="25">
+                <input type="number" id="work-time" value="25">
             </label>
             <label for="break-time">
                 <span>BREAK TIME</span>
-                <input type="text" id="break-time" value="5">
+                <input type="number" id="break-time" value="5">
             </label>
             <label for="rest-time">
                 <span>REST TIME</span>
-                <input type="text" id="rest-time" value="15">
+                <input type="number" id="rest-time" value="15">
             </label>
         </div>
     </main>
