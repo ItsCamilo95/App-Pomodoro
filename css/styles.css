@@ -1,3 +1,15 @@
-body{
-    background-color: blue;
+html{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.pomodoro-container{
+    min-width: 320px;
+    width: 70%;
+    margin: 50px auto 0 auto;
+    height: 200px;
+    border: 1px solid black;
+    text-align: center;
 }
