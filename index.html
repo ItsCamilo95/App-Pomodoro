@@ -11,31 +11,41 @@
 <body>
     <main class="pomodoro-container">
         <div class="clock-container">
-            <h2>25:00</h2>
+            <h2 id="clock">25:00</h2>
             <div class="input-container">
                 <label for="">Pomodoro cycles</label>
-                <input type="number" value="1" disabled>
+                <input id="cyclesInput" type="number" value="0">
             </div>
         </div>
         <div>
-            <button class="button-container">
+            <button class="button-container" id="buttonStart">
                 <span type="button" class="button-start">START</span>
+            </button>
+            <button class="button-container inactive" id="buttonStop">
+                <span type="button" class="button-start">STOP</span>
+            </button>
+            <button class="button-container inactive" id="buttonReanudate">
+                <span type="button" class="button-start">REANUDATE</span>
             </button>
         </div>
         <div class="settings-container">
-            <label for="work-time">
+            <label for="workTime">
                 <span>WORK TIME</span>
-                <input type="number" id="work-time" value="25">
+                <input type="number" id="workTime" min="1"   value="25">
             </label>
-            <label for="break-time">
+            <label for="breakTime">
                 <span>BREAK TIME</span>
-                <input type="number" id="break-time" value="5">
+                <input type="number" id="breakTime" min="1"  value="5">
             </label>
-            <label for="rest-time">
+            <label for="restTime">
                 <span>REST TIME</span>
-                <input type="number" id="rest-time" value="15">
+                <input type="number" id="restTime" min="1"  value="15">
             </label>
         </div>
     </main>
+    <audio id="audio" controls class="inactive">
+        <source type="audio/wav" src="timbre.mp3">
+        </audio>
+    <script src="script.js"></script>
 </body>
 </html>

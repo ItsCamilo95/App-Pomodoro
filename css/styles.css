@@ -34,7 +34,7 @@ input:focus{
     text-align: center;
     background: linear-gradient(to right, #30CFD0 0%, #440a8a 100%);
     border-radius: 32px 10px 32px 10px;
-    box-shadow: 2.5px 2.5px 8px #9fdbfa;
+    box-shadow: 4px 4px 10px #9fdbfa;
     
 }
 
@@ -108,4 +108,8 @@ input:focus{
     font-size: 1.2rem;
     color: white;
     font-weight: bold;
+}
+
+.inactive{
+    display: none;
 }
