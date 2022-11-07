@@ -10,28 +10,18 @@
 </head>
 <body>
     <main class="pomodoro-container">
-        <div class="settings-container">
-            <label for="workTime">
-                <span>WORK TIME</span>
-                <input type="number" id="workTime" min="1"   value="25">
-            </label>
-            <label for="breakTime">
-                <span>BREAK TIME</span>
-                <input type="number" id="breakTime" min="1"  value="5">
-            </label>
-            <label for="restTime">
-                <span>REST TIME</span>
-                <input type="number" id="restTime" min="1"  value="15">
-            </label>
-        </div>
+        <nav class="options-container">
+            <ul>
+                <li><a href="#" class="active" id="workOption">WORK TIME</a></li>
+                <li><a href="#" id="breakOption">SHORT BRAKE</a></li>
+                <li><a href="#" id="longOption">LONG BRAKE</a></li>
+                <li><a href="#" id="openModal" class="options">Settings</a></li>
+            </ul>
+        </nav>
         <div class="clock-container">
             <h2 id="clock">25:00</h2>
-            <div class="input-container">
-                <label for="">Pomodoro cycles</label>
-                <input id="cyclesInput" type="number" value="0">
-            </div>
         </div>
-        <div>
+        <div class="play-container">
             <button class="button-container" id="buttonStart">
                 <span type="button" class="button-start">START</span>
             </button>
@@ -43,6 +33,28 @@
             </button>
         </div>
     </main>
+    <section class="modal" id="modal">
+        <div class="modal-container">
+            <h2>Settings</h2>
+            <form action="#">
+                <label for="">
+                    <span>Work time:</span>
+                    <input type="number" id="workInput" value="25" min="1">
+                </label>
+                <label for="">
+                    <span>Short Break:</span>
+                    <input type="number" id="breakInput" value="5" min="1">
+                </label>
+                <label for="">
+                    <span>Long Break:</span>
+                    <input type="number" id="longInput" value="15" min="1">
+                </label>
+            </form>
+            <button class="button-close-container" id="closeModal">
+                <span type="button">OK</span>
+            </button>
+        </div>
+    </section>
     <audio id="audio" controls class="inactive">
         <source type="audio/wav" src="timbre.mp3">
         </audio>
