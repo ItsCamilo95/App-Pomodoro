@@ -19,7 +19,7 @@
             </ul>
         </nav>
         <div class="clock-container">
-            <h2 id="clock">25:00</h2>
+            <h2 id="clock"></h2>
         </div>
         <div class="play-container">
             <button class="button-container" id="buttonStart">
@@ -39,7 +39,7 @@
             <form action="#">
                 <label for="">
                     <span>Work time:</span>
-                    <input type="number" id="workInput" value="25" min="1">
+                    <input type="number" id="workInput" value="1" min="1">
                 </label>
                 <label for="">
                     <span>Short Break:</span>
@@ -50,15 +50,15 @@
                     <input type="number" id="longInput" value="15" min="1">
                 </label>
             </form>
-            <button class="button-close-container" id="closeModalAlert">
+            <button class="button-close-container" id="closeModal">
                 <span type="button">OK</span>
             </button>
         </div>
     </section>
     <section class="modal" id="modalAlert">
         <div class="modal-container">
-            <h2>HOLAAA</h2>
-            <button class="button-close-container" id="closeModal">
+            <h2 class="modal-title">Antes debes terminar el ciclo actual.</h2>
+            <button class="button-close-container" id="closeModalAlert">
                 <span type="button">OK</span>
             </button>
         </div>
