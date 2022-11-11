@@ -122,7 +122,7 @@ function timer() {
             seconds--;
         }else{
             minutes--;
-            seconds = 60;
+            seconds = 59;
         }
         console.log(minutes, seconds)
         formatNumbers(minutes, seconds)
