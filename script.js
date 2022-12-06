@@ -132,7 +132,7 @@ function timer(){
                 seconds = 59;
             }
             formatNumbers(minutes, seconds);
-        }, 100);
+        }, 1000);
     }else{
         run = false;
         seconds=60;
