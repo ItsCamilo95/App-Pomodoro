@@ -132,10 +132,10 @@ function timer(){
                 seconds = 59;
             }
             formatNumbers(minutes, seconds);
-        }, 1000);
+        }, 100);
     }else{
         run = false;
-        seconds=59;
+        seconds=60;
         ciclos++;
         if (workOption.classList.contains('active')) {
             if (ciclos==8) {
