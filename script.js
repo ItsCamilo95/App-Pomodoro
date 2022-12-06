@@ -95,10 +95,10 @@ workOption.addEventListener('click', workTime = () =>{
 
 breakOption.addEventListener('click', breakTime = () =>{
     if (!run) {
-        breakOption.classList.add('active')
-        workOption.classList.remove('active')
-        longOption.classList.remove('active')
-        clock.innerText = breakInput.value+":00"
+        breakOption.classList.add('active');
+        workOption.classList.remove('active');
+        longOption.classList.remove('active');
+        clock.innerText = breakInput.value+":00";
     }else{
         modalAlert.classList.add('modal-show');
     }
@@ -115,23 +115,28 @@ longOption.addEventListener('click', longTime = () =>{
     }
 });
 
-function timer() {
+function timer(){
     if (minutes > 0 || seconds > 0) {
         run = true;
-        if (seconds > 0) {
-            seconds--;
-        }else{
-            minutes--;
-            seconds = 60;
-        }
-        console.log(minutes, seconds)
-        formatNumbers(minutes, seconds)
-        interval = setTimeout(timer, 1000);
+        interval = setInterval(() => {
+            if (seconds > 0) {
+                seconds--;
+            }else if (seconds == 0 && minutes == 0) {
+                clearInterval(interval);
+                timer();
+                audio.play();
+                return;
+            }
+            else{
+                minutes--;
+                seconds = 59;
+            }
+            formatNumbers(minutes, seconds);
+        }, 1000);
     }else{
         run = false;
-        seconds=60;
+        seconds=59;
         ciclos++;
-        audio.play();
         if (workOption.classList.contains('active')) {
             if (ciclos==8) {
                 longTime();
